@@ -1,5 +1,5 @@
 ## -- AUTO --
 auto() {   
-    auto-java-mit "$\@"
+    auto-java-mit "$@"
 }
 ## -- AUTO --

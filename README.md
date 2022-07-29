@@ -1,13 +1,14 @@
+![logo](./logo.png)
+
 # JAVA-OSO
 
-This is an implementation of the "SOS" game (In spain "OSO" game) in
+This is an implementation of the "SOS" game (In spain "OSO") in
 Java/JavaFX made near 2017. It is extensible and can be used to implement
 any other board game.
 
 - The original name was "hrkono" (Somehow always I played this as "ONO").
 - SOS/OSO wikipedia page [here](https://en.wikipedia.org/wiki/SOS_(game)).
 
-![logo](./logo.png)
 ![screenshot](./demo.png)
 
 ### Changes in 2022
