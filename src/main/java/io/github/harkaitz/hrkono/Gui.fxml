@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.harkaitz.hrkono.GuiController">
+   <bottom>
+      <TextArea fx:id="log" editable="false" prefHeight="30.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></TextArea>
+   </bottom>
+   <center>
+      <VBox prefHeight="332.0" prefWidth="356.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <ToolBar>
+                     <items>
+                        <Circle fx:id="circle" fill="DODGERBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label fx:id="whoMovesText" text="Moves: " />
+                        <Button mnemonicParsing="false" onAction="#delPlayer" text="Quit" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar fx:id="commandToolbar" HBox.hgrow="ALWAYS">
+                    <items>
+                      <Button mnemonicParsing="false" text="Button" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="canvasBox">
+                     <children>
+                        <Canvas fx:id="canvas" height="200.0" width="200.0" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="stats" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                  <Label fx:id="numPLayers" text="N" />
+                  <Label text="players." />
+                  <MenuButton mnemonicParsing="false" text="Options">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#addPlayer" text="Add player" />
+                      <MenuItem mnemonicParsing="false" onAction="#nextPlayer" text="Next player" />
+                        <Menu fx:id="newButton" mnemonicParsing="false" text="New game" />
+                    </items>
+                  </MenuButton>
+                  <MenuButton fx:id="pointsButton" mnemonicParsing="false" text="Points">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
